@@ -21,6 +21,7 @@ run laravel without create virtual host:
 ```
 php artisan serve
 ```
+in laravel combination tow function var_dump() and die() use dd();
 #migration  laravel
 run all migration for create table in database set in .env
 ```

@@ -20,9 +20,16 @@ Route::get('/about-us','PageController@aboutUs');
 //    return view('aboutUs');
 //});
 Route::get('/products',function (){
-   $product = DB::table('products')
-//       ->where('name','like',"%x%")
+   $products = DB::table('products')
+       ->orderBy('name')
+       ->get();
+    //       ->where('name','like',"%x%")
 //       ->where('description','like','%2018%')
-       ->first();
-   dd($product);
+   return view('products.index',compact('products'));
+});
+Route::get('products/{id}',function ($id){
+   $product = DB::table('products')->find($id);
+//       ->where('id','=', $id)
+//       ->first();
+   return view('products.show',compact('product'));
 });
