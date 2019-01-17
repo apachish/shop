@@ -10,6 +10,15 @@
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+#config
+Directory Permissions
+After installing Laravel, you may need to configure some permissions. Directories within the  storage and the bootstrap/cache directories should be writable by your web server or Laravel will not run. If you are using the Homestead virtual machine, these permissions should already be set.
+
+Application Key
+The next thing you should do after installing Laravel is set your application key to a random string. If you installed Laravel via Composer or the Laravel installer, this key has already been set for you by the php artisan key:generate command.
+
+Typically, this string should be 32 characters long. The key can be set in the .env environment file. If you have not renamed the .env.example file to .env, you should do that now. If the application key is not set, your user sessions and other encrypted data will not be secure!
+
 
 #phpstorm for laravel
 Use the link's github below to know the functions's laravel to phpstorm
@@ -62,3 +71,20 @@ you can rollback migration back to last migration ,and again run migration for d
 ```
 php artisan  migrate:rollback 
 ```
+##ORM (Object relation map) Eloquent
+In laravel, there is a system, or in our way, we can map each row's dataBase to an object in the program, for example, 
+an object of the product , when we query the database, gives us an object from the row of the database.
+This kind of m of mvc laravel (models in laravel)
+```
+php artisan  make:model  product
+```
+In the models, their names are singular names. The names of the tables are nouns.
+ Each object's model is represented from a table row in our database.
+ model create in folder app(namespace app)
+The model was an interface layer between us and the database   
+   ##tinker
+A console that accesses the app   
+   ```
+   php artisan tinker
+   ```
+   <img src="https://shop.apachish.com/img/tinker.jpg" alt="tinker"/>

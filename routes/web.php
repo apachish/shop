@@ -14,22 +14,36 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/','PageController@index');
-Route::get('/about-us','PageController@aboutUs');
+use App\Product;
+
+Route::get('/', 'PageController@index');
+Route::get('/about-us', 'PageController@aboutUs');
 //Route::get('/about-us', function () {
 //    return view('aboutUs');
 //});
-Route::get('/products',function (){
-   $products = DB::table('products')
-       ->orderBy('name')
-       ->get();
+Route::get('/products', function () {
+    $products = Product::all();
+//   $products = DB::table('products')
+//       ->orderBy('name')
+//       ->get();
     //       ->where('name','like',"%x%")
 //       ->where('description','like','%2018%')
-   return view('products.index',compact('products'));
+    return view('products.index', compact('products'));
 });
-Route::get('products/{id}',function ($id){
-   $product = DB::table('products')->find($id);
+Route::get('/products/iphone', function () {
+    $products = Product::apple();
+
+//   $products = DB::table('products')
+//       ->orderBy('name')
+//       ->get();
+    //       ->where('name','like',"%x%")
+//       ->where('description','like','%2018%')
+    return view('products.index', compact('products'));
+});
+Route::get('products/{id}', function ($id) {
+    $product = Product::find($id);
+//   $product = DB::table('products')->find($id);
 //       ->where('id','=', $id)
 //       ->first();
-   return view('products.show',compact('product'));
+    return view('products.show', compact('product'));
 });
