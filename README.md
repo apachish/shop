@@ -76,15 +76,20 @@ In laravel, there is a system, or in our way, we can map each row's dataBase to 
 an object of the product , when we query the database, gives us an object from the row of the database.
 This kind of m of mvc laravel (models in laravel)
 ```
-php artisan  make:model  product
+php artisan  make:model  Product
 ```
 In the models, their names are singular names. The names of the tables are nouns.
  Each object's model is represented from a table row in our database.
  model create in folder app(namespace app)
 The model was an interface layer between us and the database   
+for create model and migration and controller by one command:
+```
+php artisan  make:model  Product -m -c 
+```
    ##tinker
 A console that accesses the app   
    ```
    php artisan tinker
    ```
    <img src="https://shop.apachish.com/img/tinker.jpg" alt="tinker"/>
+   
