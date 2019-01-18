@@ -24,4 +24,10 @@ class ProductController extends Controller
         $products = Product::search($search);
         return view('products.index', compact('products'));
     }
+    public function create(){
+        return view('products.create');
+    }
+    public function store(){
+        dd('store');
+    }
 }

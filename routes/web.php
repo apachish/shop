@@ -22,5 +22,7 @@ Route::get('/about-us', 'PageController@aboutUs');
 //    return view('aboutUs');
 //});
 Route::get('/products', 'ProductController@index');
-Route::get('/products/search/{search}', 'ProductController@search');
+//Route::get('/products/search/{search}', 'ProductController@search');
+Route::get('products/create', 'ProductController@create');
 Route::get('products/{id}', 'ProductController@show');
+Route::post('products', 'ProductController@store')->name('products.store');
