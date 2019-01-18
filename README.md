@@ -93,3 +93,20 @@ A console that accesses the app
    ```
    <img src="https://shop.apachish.com/img/tinker.jpg" alt="tinker"/>
    
+   ##blade
+   for create layouts you can create folder layouts next create file layout in folder.
+   after create layout , you can use layout by below code
+      ```
+      @extends('Folder_layouts.name_file_layout')
+      ```
+      
+      
+   create section in layout by @yield('name_section') in file layout and fill in other file use layout
+    ```
+    @section('name_section')
+    @endsection
+    ```
+    for use in file css or js in webservice ,you can use function asset for example:
+        ```
+            <link rel="stylesheet" href="{{asset("css/navbar-top-fixed.css")}}">
+        ```

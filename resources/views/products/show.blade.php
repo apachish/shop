@@ -1,17 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Document</title>
-</head>
-<body>
-<h1>
-    {{$product->name}}
-</h1>
-<p>
-    {{$product->description}}
-</p>
-</body>
-</html>
+@extends('layouts.app')
+@section('content')
+    <h1>
+        {{$product->name}}
+    </h1>
+    <p>
+        {{$product->description}}
+    </p>
+@endsection

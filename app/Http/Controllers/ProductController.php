@@ -10,18 +10,14 @@ class ProductController extends Controller
     //
     public function index(){
         $products = Product::all();
-//   $products = DB::table('products')
-//       ->orderBy('name')
-//       ->get();
-        //       ->where('name','like',"%x%")
-//       ->where('description','like','%2018%')
         return view('products.index', compact('products'));
     }
+    /*
+     * find takes an id and returns a single model. If no matching model exist, it returns null.
+     * findOrFail takes an id and returns a single model. If no matching model exist, it throws an error1.
+     */
     public function show($id){
-        $product = Product::find($id);
-//   $product = DB::table('products')->find($id);
-//       ->where('id','=', $id)
-//       ->first();
+        $product = Product::findOrFail($id);
         return view('products.show', compact('product'));
     }
     public function search($search){
