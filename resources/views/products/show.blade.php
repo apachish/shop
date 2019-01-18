@@ -1,9 +1,15 @@
 @extends('layouts.app')
 @section('content')
-    <h1>
+    <h3>
         {{$product->name}}
-    </h1>
+    </h3>
     <p>
-        {{$product->description}}
+        description :{{$product->description}}
+    </p>
+    <p>
+        price :{{$product->price}} $
+    </p>
+    <p>
+        weight :{{$product->weight}}
     </p>
 @endsection

@@ -9,7 +9,7 @@
                 {{csrf_field()}}
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name"  placeholder="Enter Name">
+                    <input type="text" class="form-control" id="name"  name="name" placeholder="Enter Name">
                 </div>
                 <div class="form-group">
                     <label for="description">Description</label>
@@ -17,11 +17,11 @@
                 </div>
                 <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="number" class="form-control" id="price"  placeholder="Enter Price">
+                    <input type="number" class="form-control" id="price" name="price" placeholder="Enter Price">
                 </div>
                 <div class="form-group">
                     <label for="weight">Weight</label>
-                    <input type="number" class="form-control" id="weight"  placeholder="Enter Weight">
+                    <input type="number" class="form-control" id="weight" name="weight"  placeholder="Enter Weight">
                 </div>
                 <button type="submit" class="btn btn-success">send</button>
             </form>
