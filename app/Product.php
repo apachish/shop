@@ -14,4 +14,12 @@ class Product extends Model
         return     $products = self::where('name','like','%'.$search.'%')->get();
 
     }
+    //a product for one user
+    public function  user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function categories(){
+        return$this->belongsToMany(Category::class)->withTimestamps()->as('tag');//withPivot(['created_at'])//change pivot to tag
+    }
 }

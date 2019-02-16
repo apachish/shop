@@ -81,13 +81,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    @foreach($names as $name)
-                        <div>
-                            name: {{$name['firstName']}}
 
-                            family: {{$name['lastName']}}
+                        <div>
+                            Shahriar
                         </div>
-                        @endforeach
                 </div>
 
                 <div class="links">
